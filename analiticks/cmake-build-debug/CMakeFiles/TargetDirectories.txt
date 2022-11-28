@@ -1,3 +1,0 @@
-/Users/vsdmitri/Desktop/Term3/arh/pr/pr2/analiticks/cmake-build-debug/CMakeFiles/analiticks.dir
-/Users/vsdmitri/Desktop/Term3/arh/pr/pr2/analiticks/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/vsdmitri/Desktop/Term3/arh/pr/pr2/analiticks/cmake-build-debug/CMakeFiles/rebuild_cache.dir

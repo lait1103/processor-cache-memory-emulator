@@ -1,3 +1,9 @@
+// Created by my unimates
+`define delay(TIME, CLOCK) \
+    for (int i = 0; i < TIME; i++) begin \
+        wait(clk == (i + !CLOCK) % 2); \
+    end
+
 `define BITS_IN_BYTE 8
 
 `define CACHE_LINE_COUNT 64
