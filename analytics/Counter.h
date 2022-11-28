@@ -16,8 +16,8 @@ public:
     inline void mis() { mises++; }
 
     inline void printStats() {
-        std::cout << "Ticks: " << clock << ", " << extraTicks <<'\n' << "Hits: " << hits << '\n' << "Memory accesses: " << mises + hits<< '\n'
-                  << "Percentage of hits: " << hits * 1.0 / (hits + mises);
+        std::cout << "Total ticks: " << clock << " + " << extraTicks << " = " << extraTicks + clock  << "\nTotal memory accesses: " << mises + hits << '\n' <<  "Cache hits: " << hits << '\n'
+                  << "Part of hits: " << hits * 1.0 / (hits + mises);
     }
 
 private:
