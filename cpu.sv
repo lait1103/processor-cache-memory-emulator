@@ -65,18 +65,18 @@ module cpu(input clk, output wire [`ADDR1_BUS_SIZE - 1 : 0] a1, inout wire [`DAT
                   s += resultRead8 * resultRead16;
                   pb += 2 * N;
                   extraTicks += 5 + 1 + 1; // mul, add, ad
-                  extraTicks += 1; // loop
+                  extraTicks += 2; // loop
               end
               $fdisplay(counter.log, "Stardted writing 's', x = %0d, y = %0d, time = %0d", x, y, $time / 2); 
               write32 (pc + x * 4, s);
               $fdisplay(counter.log, "Finished writing 's', x = %0d, y = %0d, time = %0d", x, y, $time / 2); 
-             extraTicks += 1; // loop
+             extraTicks += 2; // loop
            end
            extraTicks += 1; // add
            extraTicks += 1; // add
            pa += K;
            pc += 4 * N;
-           extraTicks += 1; // loop
+           extraTicks += 2; // loop
         end
         extraTicks += 1; // func exit
         $fdisplay(counter.log, "Ended working in mull(), time =  %d", $time / 2); 
