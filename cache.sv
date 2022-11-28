@@ -257,8 +257,8 @@ module cache(input clk, input C_DUMP, input RESET, input wire [`ADDR1_BUS_SIZE -
   always @(posedge C_DUMP) begin
     $fdisplay(counter.log, "Сache DUMP, time = %0d", $time / 2); 
     for (i = 0; i < `CACHE_LINE_COUNT / `CACHE_WAY; i++ ) begin
-        $fdisplay(counter.cDump, "%d: %d %d %d %d", 2 * i, lines[i][0][127 : 96], lines[i][0][95 : 64], lines[i][0][63 : 31], lines[i][0][31 : 0]); 
-        $fdisplay(counter.cDump, "%d: %d %d %d %d", 2 * i + 1, lines[i][1][127 : 96], lines[i][1][95 : 64], lines[i][1][63 : 31], lines[i][1][31 : 0]); 
+        $fdisplay(counter.cDump, "%d: %d %d %d %d", 2 * i, lines[i][0][127 : 96], lines[i][0][95 : 64], lines[i][0][63 : 32], lines[i][0][31 : 0]); 
+        $fdisplay(counter.cDump, "%d: %d %d %d %d", 2 * i + 1, lines[i][1][127 : 96], lines[i][1][95 : 64], lines[i][1][63 : 32], lines[i][1][31 : 0]); 
     end       
   end
 
